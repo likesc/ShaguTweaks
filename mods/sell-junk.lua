@@ -84,13 +84,16 @@ module.enable = function(self)
     end
 
     -- get value
+  if RDbItems then
     local _, icount = GetContainerItemInfo(bag, slot)
     local _, _, id = string.find(GetContainerItemLink(bag, slot), "item:(%d+):%d+:%d+:%d+")
-    local price = ShaguTweaks.SellValueDB[tonumber(id)] or 0
-    if this.price then
+    local info = RDbItems["item"][tonumber(id)]
+    local price = info and info[4] or 0
+    if this.price and price > 0 then
       this.price = this.price + ( price * ( icount or 1 ) )
       this.count = this.count + 1
     end
+  end
 
     -- abort if the merchant window disappeared
     if not this.merchant then return end

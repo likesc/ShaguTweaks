@@ -7,12 +7,12 @@
 ## SavedVariablesPerCharacter: ShaguTweaks_config, ShaguTweaks_cache
 
 # locales
-locales\locales_deDE.lua
+#-- locales\locales_deDE.lua
 locales\locales_enUS.lua
-locales\locales_esES.lua
-locales\locales_frFR.lua
-locales\locales_koKR.lua
-locales\locales_ruRU.lua
+#-- locales\locales_esES.lua
+#-- locales\locales_frFR.lua
+#-- locales\locales_koKR.lua
+#-- locales\locales_ruRU.lua
 locales\locales_zhCN.lua
 
 # translations
@@ -51,7 +51,7 @@ mods\minimap-tweaks.lua
 mods\nameplate-scale.lua
 mods\sell-junk.lua
 mods\unitframes-classcolor.lua
-mods\vendor-values.lua
+#-- mods\vendor-values.lua  #== with Modified(mods\sell-junk.lua)
 mods\worldmap-coordinates.lua
 mods\worldmap-window.lua
 mods\blue-shaman.lua

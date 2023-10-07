@@ -34,6 +34,9 @@ module.enable = function(self)
 	  elseif reaction and reaction > 4 then
 	    TargetFrameNameBackground:Hide()
     else
+	    if (UnitIsTapped("target")) and (not UnitIsTappedByPlayer("target")) then
+		TargetFrameNameBackground:SetVertexColor(0.6275, 0.6275, 0.6275, 1)
+	    end
 	    TargetFrameNameBackground:Show()
     end
   end
